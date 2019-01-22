@@ -40,16 +40,7 @@ declare module "react-native-image-picker" {
         rotation?: number;
         allowsEditing?: boolean;
         noData?: boolean;
-        storageOptions?: StorageOptions;
     }
-
-    interface StorageOptions {
-        skipBackup?: boolean;
-        path?: string;
-        cameraRoll?: boolean;
-        waitUntilSaved?: boolean;
-    }
-
 
     class ImagePicker {
         static showImagePicker(options: Options, callback: (response: Response) => void): void;

@@ -25,8 +25,12 @@ module.exports = {
       callback = options;
       options = {};
     }
+    const {
+      storageOptions,
+      ...options_
+    } = options;
     return ImagePickerManager.showImagePicker(
-      { ...DEFAULT_OPTIONS, ...options },
+      { ...DEFAULT_OPTIONS, ...options_ },
       callback,
     );
   },
